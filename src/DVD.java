@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 public class DVD extends Movie{
 
-	public DVD(String title, int runTime, ArrayList<String> scenes) {
-		super(title, runTime, scenes);
+	public DVD(String title, int runTime) {
+		this.title = title;
+		this.runTime = runTime;
 	}
 	Scanner scnr = new Scanner(System.in);
 	@Override
 	public void play() {
-		System.out.println("Which scene would you like to watch?");
+		System.out.println("Which scene would you like to watch? 1-6");
 		super.printScenes();
 		int choice = scnr.nextInt();
 		

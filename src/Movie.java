@@ -5,13 +5,16 @@ public abstract class Movie {
 //  A field for title that’s a string 
 //	An field for runTime (in minutes) 
 //	An array list of string called scenes
-		private String title;
-		private int runTime;
-		protected ArrayList<String> scenes = new ArrayList<String>();
+		public String title;
+		public int runTime;
+		public ArrayList<String> scenes = new ArrayList<String>();
+		
 		public abstract void play();
 		
 		public Movie() {
+			
 		}
+		
 		public Movie(String title, int runTime, ArrayList<String> scenes) {
 			super();
 			this.title = title;
@@ -44,16 +47,19 @@ public abstract class Movie {
 		
 		
 		public void printInfo() {
-			System.out.println(getTitle());
-			System.out.println(getRunTime());
+			System.out.println("Title: " + getTitle());
+			System.out.println("Run time: " + getRunTime());
 			
 		}
 		public void printScenes() {
-			System.out.println(getScenes());
+			for (int i=0; i< scenes.size(); i++) {
+				System.out.println(scenes.indexOf(i));
 		
 		}
 		
-		
+		}
+
+	
 				
 			
 	}

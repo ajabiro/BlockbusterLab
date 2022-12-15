@@ -7,8 +7,9 @@ public class VHS extends Movie{
 
 	private int currentTime = 0;
 
-	public VHS(String title, int runTime, ArrayList<String> scenes) {
-		super();
+	public VHS(String title, int runTime) {
+		this.title = title;
+		this.runTime = runTime;
 	}
 
 	public int getCurrentTime() {
@@ -30,6 +31,8 @@ public class VHS extends Movie{
 	} else if (currentTime >= (getScenes().size())) {
 		rewind();
 	}
+	
+	
 	
 	}
 	
